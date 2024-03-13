@@ -1,0 +1,120 @@
+{% extends layout_name %}
+{% load static %}
+
+{% block title %}Create new character{% endblock %}
+
+{% block body %}
+    <div class="center-wrapper">
+        <h1>Fill in this form to create your new artistic character</h1>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+
+            <div class="center-wrapper">
+                <span class="label">What is the name of your character?</span>
+            </div>
+            <div class="center-wrapper">{{ form.name }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">What forms of art do you enjoy the most?</span>
+            </div>
+            <div class="center-wrapper">{{ form.art_forms }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">Do you prefer traditional or contemporary art?</span>
+            </div>
+            <div class="center-wrapper">{{ form.art_preference }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">Which artists or art movements inspire you?</span>
+            </div>
+            <div class="center-wrapper">{{ form.art_inspiration }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    What emotions or messages do you aim to convey
+                    through your art?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.art_emotions }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    Are there any specific themes or subjects that
+                    frequently appear in your artwork?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.art_themes }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    Do you prefer creating art independently
+                    or collaborating with others?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.art_creation }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">What role does art play in your life?</span>
+            </div>
+            <div class="center-wrapper">{{ form.art_role }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    How do you handle criticism or feedback about your artwork?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.art_feedback }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    Do you have any long-term goals or aspirations for
+                    your artistic journey?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.art_goals }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">How do you approach the creative process?</span>
+            </div>
+            <div class="center-wrapper">{{ form.creative_process }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    How important is technical skill versus personal
+                    expression in your artwork?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.technical_skill }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    How do you feel about experimenting
+                    with new techniques or styles?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.art_experimentation }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    Is there a particular audience or
+                    demographic you intend to connect with through your art?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.target_audience }}</div>
+
+            <div class="center-wrapper">
+                <span class="label">
+                    Are there any specific cultural or historical
+                    influences that shape your artistic style?
+                </span>
+            </div>
+            <div class="center-wrapper">{{ form.cultural_influences }}</div>
+
+        <div class="center-wrapper">
+            <button id="create_character" type="submit">Submit</button>
+        </div><br>
+
+    </form>
+{% endblock %}

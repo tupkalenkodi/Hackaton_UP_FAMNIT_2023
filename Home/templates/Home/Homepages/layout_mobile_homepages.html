@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'Home/css/main.css' %}">
+    <link rel="icon" href="{% static 'Home/images/favicon/favicon.ico' %}">
+
+    <script src="https://kit.fontawesome.com/535d3d7528.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src={% static "Home/js/toggle.js" %}></script>
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <table>
+        <tr class="nav_bar">
+
+            <th id="logo">
+                <img src="{% static 'Home/images/favicon/favicon-32x32.png' %}" alt="C.A">
+            </th>
+
+            <th id="menu">
+                <button id="button_menu" onclick="toggleElement('mobile_navbar')">
+                    Menu
+                </button>
+            </th>
+        </tr>
+    </table>
+
+    <div id="mobile_navbar" class="hidden">
+                <li><a href="{% url "homepage" %}">Homepage</a></li>
+                <li><a href="{% url "faq" %}">FAQ</a></li>
+                <li><a href="{% url "developers" %}">Developers</a></li>
+                <li><a href="{% url 'login' %}">Sign in</a></li>
+                <li><a href="{% url 'register' %}">Sign up</a></li>
+    </div>
+
+{% block body %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+Django~=4.2.11
+django_user_agents
+django_extensions
+openai==0.27.8

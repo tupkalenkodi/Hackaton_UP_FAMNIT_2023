@@ -1,0 +1,30 @@
+{% extends layout_name %}
+
+{% block title %}History{% endblock %}
+
+{% block body %}
+    <form method="post" id="filter_form">
+    {% csrf_token %}
+
+        <label for="chosen_character">Sort by Character:</label>
+        <select id="chosen_character" name="chosen_character" onclick="submitFormOnChange()">
+            <option value="None">None</option>
+            {% for character in user_characters %}
+                <option value="{{ character.name }}" {% if character.name == chosen_character %}selected{% endif %}>
+                    {{ character.name }}
+                </option>
+            {% endfor %}
+            <option value="None" disabled selected>{{ chosen_character }}</option>
+        </select>
+
+    </form>
+
+    {% for history_item in history_items %}
+        <div class="history_item_container">
+            <div><b>Character:</b> {{ history_item.character }}</div><br>
+            <div><b>Theme:</b> {{ history_item.theme }}</div><br>
+            <div class="text_container">{{ history_item.text }}</div>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}

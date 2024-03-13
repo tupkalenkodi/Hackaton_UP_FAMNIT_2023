@@ -1,0 +1,96 @@
+{% extends layout_name %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block body %}
+    <h1>Frequently Asked Questions</h1><br>
+
+    <h2 class="question" onclick="toggleElement('answer1')">
+        What should I do after registration and login?
+    </h2>
+    <div id="answer1" class="answer hidden">
+        <p>
+            After registration and login, follow these steps:
+        </p>
+        <ol>
+            <li>Create your Art Character by answering a series of questions that help the Contexto API
+                understand your art preferences.</li>
+            <li>On the main working page, select your available Art Character and choose the theme for
+                your content.</li>
+            <li>Submit the request and wait for Contexto API to generate your customized content.</li>
+        </ol>
+    </div>
+
+    <h2 class="question" onclick="toggleElement('answer2')">
+        Can I customize the art content I receive from the API?
+    </h2>
+    <div id="answer2" class="answer hidden">
+        <p>
+            Absolutely! Contexto API offers customization options:
+        </p>
+        <p>
+            You have the ability to customize aspects such as your preferred art forms, styles, emotions,
+            and more. By personalizing these parameters, you'll receive art content tailored to your
+            specific preferences and creative vision.
+        </p>
+    </div>
+
+    <h2 class="question" onclick="toggleElement('answer3')">
+        How long does it take to receive the customized content?
+    </h2>
+    <div id="answer3" class="answer hidden">
+        <p>
+            The time it takes to receive your customized content depends on various factors, including
+            the complexity of your request and the current load on the Contexto API. In general, you can
+            expect to receive your content within a few minutes.
+        </p>
+    </div>
+
+    <h2 class="question" onclick="toggleElement('answer4')">
+        Is the generated art content free to use for commercial purposes?
+    </h2>
+    <div id="answer4" class="answer hidden">
+        <p>
+            Yes, the generated art content is free to use for commercial purposes. Since the content is
+            generated using your own personalized parameters, you have full ownership and rights over the
+            content produced. Feel free to use it in your commercial projects, exhibitions, or any other
+            context that aligns with your creative vision.
+        </p>
+    </div>
+
+    <h2 class="question" onclick="toggleElement('answer5')">
+        What formats does the generated content come in?
+    </h2>
+    <div id="answer5" class="answer hidden">
+        <p>
+            Currently, the generated content is available only in text format. You can receive descriptions,
+            narratives, and textual representations of your personalized art content. However, we are actively
+            working to expand the possibilities, and in the near future, we plan to offer generated content in audio and
+            video formats as well. This expansion will allow you to experience your art content in even more dynamic
+            and engaging ways.
+        </p>
+    </div>
+
+    <h2 class="question" onclick="toggleElement('answer6')">
+        How secure is my personal information?
+    </h2>
+    <div id="answer6" class="answer hidden">
+        <p>
+            We take the security of your personal information seriously. Your data is encrypted and stored
+            securely. We only use the information necessary for generating tailored content and strictly adhere
+            to privacy policies to ensure the confidentiality of your data.
+        </p>
+    </div>
+
+    <h2 class="question" onclick="toggleElement('answer7')">
+        Can I request content in multiple languages?
+    </h2>
+    <div id="answer7" class="answer hidden">
+        <p>
+            Currently, the Contexto API primarily supports content generation in one primary language. However,
+            we're continuously working to expand our language capabilities, so stay tuned for updates on
+            multi-language support.
+        </p>
+    </div><br>
+
+{% endblock %}

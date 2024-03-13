@@ -1,0 +1,44 @@
+{% extends layout_name %}
+
+{% block title%}Homepage{% endblock %}
+
+{% block body %}
+    <h1>Welcome to Contexto API: Unleash Your Creativity!</h1>
+
+    <h2>About Contexto API</h2>
+        <p>
+            Are you an artist searching for fresh inspiration,
+            a content creator looking to add a unique touch
+            to your work, or simply an art enthusiast who
+            do not want to spend hours preparing the scenario and struggling on developing new ideas?
+            Look no further!
+            Contexto API is here to revolutionize the way you
+            create and connect with art.
+        </p>
+
+        <p>
+            At Contexto API, we understand that creativity knows no bounds,
+            and each individual has their own artistic preferences and
+            unique style. That's why we've developed a powerful platform
+            that connects you with a vast range of art content,
+            tailored specifically to your preferences and artistic
+            interests.
+        </p>
+
+    <h2>Integrating with Contexto API</h2>
+        <p>
+            How does it work? It's simple!
+            By leveraging the power of advanced algorithms
+            and machine learning, our API analyzes your specified
+            preferences and delivers an art selection
+            that perfectly matches your criteria.
+        </p>
+
+    <h2>Get Started Today</h2>
+        <p>
+            Are you ready to embark on a creative journey like no other?
+            <a href={% url "register" %}>Sign up</a> today and let Contexto API unleash the full
+            potential of your artistry!
+        </p>
+
+{% endblock %}

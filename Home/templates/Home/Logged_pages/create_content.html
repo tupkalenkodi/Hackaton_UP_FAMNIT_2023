@@ -1,0 +1,44 @@
+{% extends layout_name %}
+
+{% block title %}Create Your Content{% endblock %}
+
+
+{% block body %}
+<div class="content-block">
+    <h2>Ready to Create New Content?</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="character">Choose a Character:</label>
+        <select id="character">
+            {% for character in user_characters %}
+                <option value="{{ character.name }}">{{ character.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="theme">Enter the Theme of the Material:</label>
+        <input type="text" id="theme" placeholder="Tech Wonders for Beginners: Exploring Gadgets and Gizmos">
+
+        <button id="create_content" type="button" onclick="ProcessSaveGptRequest()">
+            Generate Content
+        </button>
+
+    </form>
+</div>
+
+<div id="output-area">
+    <div class="copy-button-container">
+        <button class="copy-button" onclick="copyText('gpt-output')">
+            <i class="fa-regular fa-clipboard"></i> Copy
+        </button>
+    </div>
+    <output id="gpt-output"></output>
+</div>
+
+<div id="error-message" class="error-messages">
+    Uh-oh! It appears you haven't created a character yet. To get started with Contexto and generate content, please create your character first.
+</div>
+
+
+{% endblock %}

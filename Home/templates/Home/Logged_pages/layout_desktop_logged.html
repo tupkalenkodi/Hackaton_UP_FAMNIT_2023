@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="{% static 'Home/css/logged.css' %}">
+    <link rel="icon" href="{% static 'Home/images/favicon/favicon.ico' %}">
+
+    <script src="https://kit.fontawesome.com/535d3d7528.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src={% static "Home/js/gpt.js" %}></script>
+    <script type="text/javascript" src={% static "Home/js/copy_clipboard.js" %}></script>
+    <script type="text/javascript" src={% static "Home/js/filter_form.js" %}></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <table>
+        <tr class="nav_bar">
+            <th id="logo">
+                <img src="{% static 'Home/images/favicon/favicon-32x32.png' %}" alt="C.A">
+            </th>
+
+            <th id="CContent">
+                <a href="{% url "homepage" %}">
+                    Create content
+                </a>
+            </th>
+
+            <th id="CCharacter">
+                <a href="{% url "create_character" %}">
+                    Create new character
+                </a>
+            </th>
+
+            <th id="History">
+                <a href="{% url "history" %}">
+                    History
+                </a>
+            </th>
+
+            <th id="Logout">
+                <a href="{% url "logout" %}">
+                    Logout
+                </a>
+            </th>
+        </tr>
+    </table>
+
+{% block body %}{% endblock %}
+</body>
+
+</html>
+<!-- TODO: make design for mobile phone -->
